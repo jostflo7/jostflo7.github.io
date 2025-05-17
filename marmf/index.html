@@ -96,6 +96,60 @@
       font-size: .9rem;
       color: #777;
     }
+
+    /* grid and card styling (your existing rules) */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .card a {
+      display: block;
+      padding: 0.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #222;
+      border: 1px solid transparent;
+      transition: background-color 0.2s, border-color 0.2s;
+    }
+
+    .card a span {
+      display: block;
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 0.25rem;
+    }
+
+    /* rarity classes */
+    .rarity-common {
+      background-color: rgba(128, 128, 128, 0.1);
+      /* pale gray */
+      border-color: rgba(128, 128, 128, 0.3);
+    }
+
+    .rarity-uncommon {
+      background-color: rgba(0, 128, 0, 0.1);
+      /* pale green */
+      border-color: rgba(0, 128, 0, 0.3);
+    }
+
+    .rarity-rare {
+      background-color: rgba(212, 175, 55, 0.1);
+      /* pale gold */
+      border-color: rgba(212, 175, 55, 0.4);
+    }
+
+    .rarity-mythic {
+      background-color: rgba(163, 53, 238, 0.1);
+      /* pale purple */
+      border-color: rgba(163, 53, 238, 0.4);
+    }
+
+    /* hover effect */
+    .card a:hover {
+      filter: brightness(0.95);
+    }
   </style>
 </head>
 
@@ -108,21 +162,29 @@
     <section id="standard">
       <h2>Standard</h2>
       <div class="grid">
-        <div class="card">
-          <a href="https://scryfall.com/random?as=grid&order=name&q=%28game%3Apaper%29+legal%3Astandard">Randomiser
-            Link<span>No Power Ups</span></a>
+        <div class="card rarity-common">
+          <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:standard">
+            Randomiser Link
+            <span>No Power Ups</span>
+          </a>
         </div>
-        <div class="card">
-          <a href="https://scryfall.com/random?as=grid&order=name&q=%28game%3Apaper%29+legal%3Astandard+rarity%3Am">Randomiser
-            Link<span>Mythic Power Up</span></a>
+        <div class="card rarity-mythic">
+          <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:standard+rarity:m">
+            Randomiser Link
+            <span>Mythic Power Up</span>
+          </a>
         </div>
-        <div class="card">
-          <a href="https://scryfall.com/random?as=grid&order=name&q=%28game%3Apaper%29+legal%3Astandard+rarity%3Ar">Randomiser
-            Link<span>Rare Power Up</span></a>
+        <div class="card rarity-rare">
+          <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:standard+rarity:r">
+            Randomiser Link
+            <span>Rare Power Up</span>
+          </a>
         </div>
-        <div class="card">
-          <a href="https://scryfall.com/random?as=grid&order=name&q=%28game%3Apaper%29+legal%3Astandard+rarity%3Au">Randomiser
-            Link<span>Uncommon Power Up</span></a>
+        <div class="card rarity-uncommon">
+          <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:standard+rarity:u">
+            Randomiser Link
+            <span>Uncommon Power Up</span>
+          </a>
         </div>
       </div>
     </section>
@@ -130,21 +192,29 @@
     <section id="pioneer">
       <h2>Pioneer</h2>
       <div class="grid">
-        <div class="card">
+        <div class="card rarity-common">
           <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:pioneer">
-            Randomiser Link<span>No Power Ups</span></a>
+            Randomiser Link
+            <span>No Power Ups</span>
+          </a>
         </div>
-        <div class="card">
+        <div class="card rarity-mythic">
           <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:pioneer+rarity:m">
-            Randomiser Link<span>Mythic Power Up</span></a>
+            Randomiser Link
+            <span>Mythic Power Up</span>
+          </a>
         </div>
-        <div class="card">
+        <div class="card rarity-rare">
           <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:pioneer+rarity:r">
-            Randomiser Link<span>Rare Power Up</span></a>
+            Randomiser Link
+            <span>Rare Power Up</span>
+          </a>
         </div>
-        <div class="card">
+        <div class="card rarity-uncommon">
           <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:pioneer+rarity:u">
-            Randomiser Link<span>Uncommon Power Up</span></a>
+            Randomiser Link
+            <span>Uncommon Power Up</span>
+          </a>
         </div>
       </div>
     </section>
@@ -152,21 +222,29 @@
     <section id="pauper">
       <h2>Pauper</h2>
       <div class="grid">
-        <div class="card">
+        <div class="card rarity-common">
           <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:pauper">
-            Randomiser Link<span>No Power Ups</span></a>
+            Randomiser Link
+            <span>No Power Ups</span>
+          </a>
         </div>
-        <div class="card">
-          <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:pauper+rarity:c">
-            Randomiser Link<span>Common Power Up</span></a>
+        <div class="card rarity-mythic">
+          <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:pauper+rarity:m">
+            Randomiser Link
+            <span>Mythic Power Up</span>
+          </a>
         </div>
-        <div class="card">
-          <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:pauper+rarity:u">
-            Randomiser Link<span>Uncommon Power Up</span></a>
-        </div>
-        <div class="card">
+        <div class="card rarity-rare">
           <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:pauper+rarity:r">
-            Randomiser Link<span>Rare Power Up</span></a>
+            Randomiser Link
+            <span>Rare Power Up</span>
+          </a>
+        </div>
+        <div class="card rarity-uncommon">
+          <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:pauper+rarity:u">
+            Randomiser Link
+            <span>Uncommon Power Up</span>
+          </a>
         </div>
       </div>
     </section>
@@ -174,21 +252,29 @@
     <section id="modern">
       <h2>Modern</h2>
       <div class="grid">
-        <div class="card">
+        <div class="card rarity-common">
           <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:modern">
-            Randomiser Link<span>No Power Ups</span></a>
+            Randomiser Link
+            <span>No Power Ups</span>
+          </a>
         </div>
-        <div class="card">
+        <div class="card rarity-mythic">
           <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:modern+rarity:m">
-            Randomiser Link<span>Mythic Power Up</span></a>
+            Randomiser Link
+            <span>Mythic Power Up</span>
+          </a>
         </div>
-        <div class="card">
+        <div class="card rarity-rare">
           <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:modern+rarity:r">
-            Randomiser Link<span>Rare Power Up</span></a>
+            Randomiser Link
+            <span>Rare Power Up</span>
+          </a>
         </div>
-        <div class="card">
+        <div class="card rarity-uncommon">
           <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:modern+rarity:u">
-            Randomiser Link<span>Uncommon Power Up</span></a>
+            Randomiser Link
+            <span>Uncommon Power Up</span>
+          </a>
         </div>
       </div>
     </section>
@@ -196,21 +282,29 @@
     <section id="legacy">
       <h2>Legacy</h2>
       <div class="grid">
-        <div class="card">
+        <div class="card rarity-common">
           <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:legacy">
-            Randomiser Link<span>No Power Ups</span></a>
+            Randomiser Link
+            <span>No Power Ups</span>
+          </a>
         </div>
-        <div class="card">
+        <div class="card rarity-mythic">
           <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:legacy+rarity:m">
-            Randomiser Link<span>Mythic Power Up</span></a>
+            Randomiser Link
+            <span>Mythic Power Up</span>
+          </a>
         </div>
-        <div class="card">
+        <div class="card rarity-rare">
           <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:legacy+rarity:r">
-            Randomiser Link<span>Rare Power Up</span></a>
+            Randomiser Link
+            <span>Rare Power Up</span>
+          </a>
         </div>
-        <div class="card">
+        <div class="card rarity-uncommon">
           <a href="https://scryfall.com/random?as=grid&order=name&q=(game:paper)+legal:legacy+rarity:u">
-            Randomiser Link<span>Uncommon Power Up</span></a>
+            Randomiser Link
+            <span>Uncommon Power Up</span>
+          </a>
         </div>
       </div>
     </section>
@@ -234,8 +328,8 @@
           <label for="color-select">Colors:</label>
           <select id="color-select">
             <option value="mono">Mono-color</option>
-            <option value="two">Two-color</option>
-            <option value="three">Three-color</option>
+            <option value="two">Two-color (Guilds)</option>
+            <option value="three">Three-color (Shards/Wedges)</option>
             <option value="fourplus">Four-plus colors</option>
           </select>
         </div>
@@ -244,67 +338,149 @@
       <div id="cards-container" class="cards"></div>
 
       <script>
-        // all possible color-code groups
-        const colorSets = {
-          mono: ["W", "U", "B", "R", "G"],
-          two: ["WU", "WB", "WR", "WG", "UB", "UR", "UG", "BR", "BG", "RG"],
-          three: ["WUB", "WUR", "WUG", "WBR", "WBG", "WRG", "UBR", "UBG", "URG", "BRG"],
-          fourplus: ["WUBR", "WUBG", "WURG", "WBRG", "UBRG", "WUBRG"]  // includes 5-color
+        // exact swatch colors for each mana symbol
+        const letterRGB = {
+          W: [255, 255, 200],   // light pale yellow instead of white
+          U: [0, 0, 255],
+          B: [0, 0, 0],
+          R: [255, 0, 0],
+          G: [0, 128, 0]
         };
 
-        const formatSelect = document.getElementById('format-select');
-        const colorSelect = document.getElementById('color-select');
+        // friendly names + codes
+        const colorSets = {
+          mono: [
+            { code: "W", name: "White" },
+            { code: "U", name: "Blue" },
+            { code: "B", name: "Black" },
+            { code: "R", name: "Red" },
+            { code: "G", name: "Green" }
+          ],
+          two: [
+            { code: "WU", name: "Azorius" },
+            { code: "WB", name: "Orzhov" },
+            { code: "WR", name: "Boros" },
+            { code: "WG", name: "Selesnya" },
+            { code: "UB", name: "Dimir" },
+            { code: "UR", name: "Izzet" },
+            { code: "UG", name: "Simic" },
+            { code: "BR", name: "Rakdos" },
+            { code: "BG", name: "Golgari" },
+            { code: "RG", name: "Gruul" }
+          ],
+          three: [
+            { code: "WUB", name: "Esper" },
+            { code: "WUR", name: "Jeskai" },
+            { code: "WUG", name: "Bant" },
+            { code: "WBR", name: "Mardu" },
+            { code: "WBG", name: "Abzan" },
+            { code: "WRG", name: "Naya" },
+            { code: "UBR", name: "Grixis" },
+            { code: "UBG", name: "Sultai" },
+            { code: "URG", name: "Temur" },
+            { code: "BRG", name: "Jund" }
+          ],
+          fourplus: [
+            { code: "WUBR", name: "Sans Green" },
+            { code: "WUBG", name: "Sans Red" },
+            { code: "WURG", name: "Sans Black" },
+            { code: "WBRG", name: "Sans Blue" },
+            { code: "UBRG", name: "Sans White" },
+            { code: "WUBRG", name: "Five-Color" }
+          ]
+        };
+
+        const fmtSelect = document.getElementById('format-select');
+        const clrSelect = document.getElementById('color-select');
         const container = document.getElementById('cards-container');
 
+        function capitalize(str) {
+          return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
         function generateCards() {
-          const fmt = formatSelect.value;
-          const clrGroup = colorSets[colorSelect.value];
+          const fmt = fmtSelect.value;
+          const group = colorSets[clrSelect.value];
           container.innerHTML = '';
 
-          // we'll show up to 10 codes (if there are fewer, show them all)
-          clrGroup.slice(0, 10).forEach(code => {
-            const link = document.createElement('a');
-            // build Scryfall URL
-            link.href = `https://scryfall.com/random?as=grid&order=name`
+          group.slice(0, 10).forEach(({ code, name }) => {
+            const href = `https://scryfall.com/random?as=grid&order=name`
               + `&q=(type:creature+type:legendary)+color=${code}`
               + `+(game:paper)+legal:${fmt}`;
-            link.target = '_blank';
-            link.innerHTML = `${code.length}-Color Commander<span>${code} in ${fmt.charAt(0).toUpperCase() + fmt.slice(1)}</span>`;
 
-            const card = document.createElement('div');
-            card.className = 'card';
-            card.appendChild(link);
-            container.appendChild(card);
+            // build swatches
+            const swatches = code.split('').map(ch => {
+              const [r, g, b] = letterRGB[ch];
+              return `<span class="swatch" style="
+                        background-color: rgb(${r},${g},${b});
+                        border: 1px solid rgba(${r},${g},${b},0.5);
+                      "></span>`;
+            }).join('');
+
+            // single .card anchor
+            const a = document.createElement('a');
+            a.className = 'card';
+            a.href = href;
+            a.target = '_blank';
+            a.innerHTML = `
+              <div class="swatches">${swatches}</div>
+              <div class="text">
+                ${name} Commander
+                <span>${name} in ${capitalize(fmt)}</span>
+              </div>
+            `;
+
+            container.appendChild(a);
           });
         }
 
-        // regenerate whenever selections change
-        formatSelect.addEventListener('change', generateCards);
-        colorSelect.addEventListener('change', generateCards);
+        fmtSelect.addEventListener('change', generateCards);
+        clrSelect.addEventListener('change', generateCards);
 
-        // initial render
+        // initial
         generateCards();
       </script>
 
-      </div>
+      <style>
+        .cards {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+          gap: 1rem;
+        }
+
+        .card {
+          display: block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          text-decoration: none;
+          color: #000;
+          overflow: hidden;
+        }
+
+        .swatches {
+          display: flex;
+        }
+
+        .swatch {
+          flex: 1;
+          height: 8px;
+        }
+
+        .text {
+          padding: 0.5rem;
+          text-align: center;
+        }
+
+        .text span {
+          display: block;
+          font-size: 0.85em;
+          color: #444;
+        }
+      </style>
     </section>
 
   </main>
-  <script>
-    const tabs = document.querySelectorAll('.tab-button');
-    tabs.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // deactivate all tabs & containers
-        tabs.forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.combo-container')
-          .forEach(c => c.classList.remove('active'));
-        // activate clicked tab and its target container
-        btn.classList.add('active');
-        document.getElementById(btn.dataset.target)
-          .classList.add('active');
-      });
-    });
-  </script>
+
   <footer>
     © 2025 M.A.R.M.F — Crafted with ❤️ for Magic: The Gathering
   </footer>
